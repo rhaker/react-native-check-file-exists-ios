@@ -1,0 +1,30 @@
+{
+  "name": "react-native-check-file-exists-ios",
+  "version": "0.1.0",
+  "description": "A react-native interface for checking if a file exists in the app documents directory. Returns yes or no.",
+  "main": "index.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "check file",
+    "file exists"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "github.com:rhaker/react-native-check-file-exists-ios.git"
+  },
+  "author": "rhaker <email@example.com> (http://github.com/rhaker)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhaker/react-native-check-file-exists-ios/issues"
+  },
+  "homepage": "https://github.com/rhaker/react-native-check-file-exists-ios",
+  "dependencies": {
+    "react-native": "^0.10.0"
+  },
+  "devDependencies": {}
+}
