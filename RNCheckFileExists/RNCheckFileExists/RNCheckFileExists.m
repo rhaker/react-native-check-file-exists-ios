@@ -36,7 +36,7 @@ RCT_EXPORT_METHOD(checkFile:(NSString *)fileName
     // Validate the file name has an extension
     NSRange isRange = [fileName rangeOfString:@"." options:NSCaseInsensitiveSearch];
     
-    if(isRange.location == 0) {
+    if (isRange.location == 0) {
         
         // Show failure message for hidden files
         NSDictionary *resultsDict = @{
@@ -50,10 +50,7 @@ RCT_EXPORT_METHOD(checkFile:(NSString *)fileName
         
     } else {
         
-        NSRange isSpacedRange = [fileName rangeOfString:@"." options:NSCaseInsensitiveSearch];
-        if(isSpacedRange.location != NSNotFound) {
-            // valid extension
-        } else {
+        if (isRange.location == NSNotFound) {
             
             // Show failure message for invalid extension
             NSDictionary *resultsDict = @{
@@ -68,18 +65,17 @@ RCT_EXPORT_METHOD(checkFile:(NSString *)fileName
         }
     }
     
-    // Initialize FileManager to handle pathLookup
+    // Initialize fileManager to handle pathLookup
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *pathForFile;
     
-    // Create an array of directory Paths to get the documents directory
+    // Create an array of directory paths to get the documents directory
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
     // The documents directory is the first item
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    pathForFile = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
-    NSLog(@"Writing to %@", pathForFile);
+    // Set the path
+    NSString *pathForFile = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
     
     // Check if file exists
     if ([fileManager fileExistsAtPath:pathForFile]){
