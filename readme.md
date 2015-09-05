@@ -22,11 +22,11 @@ If you get stuck, take a look at Brent Vatne's blog. His blog is my go to refere
 
 # Api Setup
 
-var {
+var React = require('react-native');
 
-    RNCheckFileExists
+var { NativeModules } = React;
 
-} = require('NativeModules');
+var { RNCheckFileExists } = NativeModules;
 
 RNCheckFileExists.checkFile(
 

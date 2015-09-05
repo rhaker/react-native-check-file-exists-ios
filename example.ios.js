@@ -3,10 +3,9 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-
-var {
-    RNCheckFileExists
-} = require('NativeModules');
+var React = require('react-native');
+var { NativeModules } = React;
+var { RNCheckFileExists } = NativeModules;
 
 var {
   AppRegistry,
