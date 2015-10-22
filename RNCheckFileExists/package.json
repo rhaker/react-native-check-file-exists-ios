@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/rhaker/react-native-check-file-exists-ios",
   "dependencies": {
-    "react-native": "^0.10.0"
+    "react-native": "^0.12.0"
   },
   "devDependencies": {}
 }
